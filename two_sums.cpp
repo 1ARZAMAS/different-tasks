@@ -5,10 +5,9 @@
 using namespace std;
 
 vector<int> twoSum(vector<int>& nums, int target) {
-    // Создание хэш-таблицы
     unordered_map<int, int> hashMap;
     for (size_t i = 0; i < nums.size(); ++i) {
-        hashMap[i] = nums[i];
+        hashMap[nums[i]] = i;
     }
     for (int i = 0; i < nums.size(); i++){
         int value = target - nums[i];
